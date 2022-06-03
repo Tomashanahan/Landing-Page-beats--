@@ -16,7 +16,6 @@ function Banner() {
 				justifyContent={"space-evenly"}
 				p={4}
 				height={"-webkit-fit-content"}
-				// height={"550px"}
 			>
 				<Box
 					data-aos="fade-down"
@@ -44,8 +43,8 @@ function Banner() {
 						a sleek, streamlined design with comfortable padded earphones,
 						delivering first-rate playback.
 					</Box>
-					<Box data-aos="fade-up" data-aos-duration="3000" mt={"20px"}>
-						<Button bg="#0A0A0B" variant="solid" p={6}>
+					<Box w='99%' m='auto' data-aos="fade-up" data-aos-duration="3000" mt={"20px"}>
+						<Button w='255px' bg="#0A0A0B" variant="solid" p={6}>
 							<Box mr={3} fontSize={"xl"}>
 								<BiShoppingBag />
 							</Box>

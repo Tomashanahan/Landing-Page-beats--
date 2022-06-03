@@ -1,3 +1,4 @@
+import React from "react";
 import {
 	Box,
 	FormControl,
@@ -8,10 +9,7 @@ import {
 	Radio,
 	Button,
 } from "@chakra-ui/react";
-import React from "react";
-
 import { AiFillCheckCircle } from "react-icons/ai";
-import { useEffect } from "react";
 
 function Contact() {
 	const initialState = { firstName: "", lastName: "", email: "" };
