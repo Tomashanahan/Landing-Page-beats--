@@ -6,7 +6,7 @@ import {
 	Input,
 	Button,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
 import { AiFillCheckCircle } from "react-icons/ai";
@@ -29,6 +29,10 @@ function Contact() {
 	function onSubmit(data) {
 		console.log(data);
 	}
+
+	useEffect(() => {
+		window.scrollTo({ top: 0 });
+	}, []);
 
 	return (
 		<Box pt={["100px", "120px", "150px", "200px"]} mb="200px" minH={"750px"}>
@@ -184,7 +188,7 @@ function Contact() {
 						bg="#FFFFFF"
 						mt={6}
 						// w={"20%"}
-                        w={["100%", "80%", "70%", "40%"]}
+						w={["100%", "80%", "70%", "40%"]}
 						type="submit"
 					>
 						Send

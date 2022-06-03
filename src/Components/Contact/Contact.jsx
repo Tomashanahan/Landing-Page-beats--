@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
 	Box,
 	FormControl,
@@ -28,6 +28,10 @@ function Contact() {
 		setFormErrors(validate(formValues));
 		setIsSubmut(true);
 	}
+
+	useEffect(() => {
+		window.scrollTo({ top: 0 });
+	}, []);
 
 	const validate = (values) => {
 		const errors = {};
@@ -161,7 +165,7 @@ function Contact() {
 						color="#0A0A0B"
 						bg="#FFFFFF"
 						mt={6}
-                        w={["100%", "80%", "70%", "40%"]}
+						w={["100%", "80%", "70%", "40%"]}
 						type="submit"
 					>
 						Send
