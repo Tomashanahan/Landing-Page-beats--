@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import {
 	Box,
 	FormControl,
@@ -6,14 +7,11 @@ import {
 	Input,
 	Button,
 } from "@chakra-ui/react";
-import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-
 import { AiFillCheckCircle } from "react-icons/ai";
-
 import { Link } from "react-router-dom";
 
-function Contact() {
+function Signin() {
 	const {
 		register,
 		formState: { errors },
@@ -23,10 +21,11 @@ function Contact() {
 	const [inputLastName, setInputLastName] = React.useState("");
 	const [inputEmail, setInputEmail] = React.useState("");
 	const [inputPassword, setInputPassword] = React.useState("");
+	/*  */
 
 	const emailRejex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
-	function onSubmit(data) {
+	async function onSubmit(data) {
 		console.log(data);
 	}
 
@@ -37,13 +36,13 @@ function Contact() {
 	return (
 		<Box pt={["100px", "120px", "150px", "150px"]} mb="200px" minH={"750px"}>
 			<Box data-aos="fade-up" data-aos-duration="2000" fontSize={"50"}>
-				Login
+				Sign Up
 			</Box>
 			<form onSubmit={handleSubmit(onSubmit)}>
-				<FormControl w={["100%", "80%", "70%", "50%"]} m="auto">
-					<SimpleGrid columns={[1, 1, 1, 1]} spacing={4}>
+				<FormControl w={["100%", "80%", "70%", "60%"]} m="auto">
+					<SimpleGrid columns={[1, 1, 2, 2]} spacing={4}>
 						<Box>
-							{/*	<Box data-aos="fade-down" data-aos-duration="2000">
+							<Box minH={"110px"} data-aos="fade-down" data-aos-duration="2000">
 								<FormLabel mt={5} htmlFor="name">
 									First Name
 								</FormLabel>
@@ -71,9 +70,9 @@ function Contact() {
 										<AiFillCheckCircle />
 									</Box>
 								)}
-							</Box> */}
+							</Box>
 
-							<Box data-aos="fade-down" data-aos-duration="1500">
+							<Box minH={"110px"} data-aos="fade-down" data-aos-duration="1500">
 								<FormLabel mt={5} htmlFor="email">
 									Email address
 								</FormLabel>
@@ -112,7 +111,7 @@ function Contact() {
 							</Box>
 						</Box>
 						<Box>
-							{/* <Box data-aos="fade-down" data-aos-duration="2000">
+							<Box minH={"110px"} data-aos="fade-down" data-aos-duration="2000">
 								<FormLabel mt={5} htmlFor="last_name">
 									Last Name
 								</FormLabel>
@@ -140,8 +139,8 @@ function Contact() {
 										<AiFillCheckCircle />
 									</Box>
 								)}
-							</Box> */}
-							<Box data-aos="fade-down" data-aos-duration="1500">
+							</Box>
+							<Box minH={"110px"} data-aos="fade-down" data-aos-duration="1500">
 								<FormLabel mt={5} htmlFor="password">
 									Password
 								</FormLabel>
@@ -179,7 +178,7 @@ function Contact() {
 						</Box>
 					</SimpleGrid>
 					<Box mt={9} cursor="pointer" textDecoration={"underline"}>
-						<Link to="/createCount">Create Count</Link>
+						<Link to="/login">Log In</Link>
 					</Box>
 					<Button
 						data-aos="fade-up"
@@ -187,7 +186,6 @@ function Contact() {
 						color="#0A0A0B"
 						bg="#FFFFFF"
 						mt={6}
-						// w={"20%"}
 						w={["100%", "80%", "70%", "40%"]}
 						type="submit"
 					>
@@ -199,4 +197,4 @@ function Contact() {
 	);
 }
 
-export default Contact;
+export default Signin;

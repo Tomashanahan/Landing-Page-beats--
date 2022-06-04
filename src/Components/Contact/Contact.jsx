@@ -47,7 +47,7 @@ function Contact() {
 	};
 
 	return (
-		<Box pt={["100px", "120px", "150px", "200px"]} mb="100px" minH={"900px"}>
+		<Box pt={["100px", "120px", "150px", "150px"]} mb="100px" minH={"900px"}>
 			<Box data-aos="fade-up" data-aos-duration="3000" fontSize={"50"}>
 				Contact Us
 			</Box>
@@ -55,7 +55,7 @@ function Contact() {
 				<FormControl w={["100%", "80%", "70%", "60%"]} m="auto">
 					<SimpleGrid columns={[1, 1, 2, 2]} spacing={4}>
 						<Box>
-							<Box minH={"96px"} data-aos="fade-down" data-aos-duration="2000">
+							<Box minH={"110px"} data-aos="fade-down" data-aos-duration="2000">
 								<FormLabel mt={5} htmlFor="name">
 									First Name
 								</FormLabel>
@@ -79,12 +79,12 @@ function Contact() {
 										<AiFillCheckCircle />
 									</Box>
 								)}
-								<Box color={"#FF6348"} fontWeight="light">
+								<Box color={"#FF6348"} fontWeight="light" mt={3}>
 									{formErrors.firstName}
 								</Box>
 							</Box>
 
-							<Box minH={"96px"} data-aos="fade-down" data-aos-duration="1500">
+							<Box minH={"110px"} data-aos="fade-down" data-aos-duration="1500">
 								<FormLabel mt={5} htmlFor="email">
 									Email address
 								</FormLabel>
@@ -107,13 +107,13 @@ function Contact() {
 										<AiFillCheckCircle />
 									</Box>
 								)}
-								<Box color={"#FF6348"} fontWeight="light">
+								<Box color={"#FF6348"} fontWeight="light" mt={3}>
 									{formErrors.email}
 								</Box>
 							</Box>
 						</Box>
 						<Box>
-							<Box minH={"96px"} data-aos="fade-down" data-aos-duration="2000">
+							<Box minH={"110px"} data-aos="fade-down" data-aos-duration="2000">
 								<FormLabel mt={5} htmlFor="last_name">
 									Last Name
 								</FormLabel>
@@ -136,7 +136,7 @@ function Contact() {
 										<AiFillCheckCircle />
 									</Box>
 								)}
-								<Box color={"#FF6348"} fontWeight="light">
+								<Box color={"#FF6348"} fontWeight="light" mt={3}>
 									{formErrors.lastName}
 								</Box>
 							</Box>

@@ -21,7 +21,7 @@ function Banner() {
 					data-aos="fade-down"
 					data-aos-duration="3000"
 					position={"relative"}
-					top={["-8rem","-7rem","-4rem"]}
+					top={["-8rem","-7rem","-6rem"]}
 					zIndex={[1,1,5,5]}
 					ml={10}
 					w={['70%','60%','30%',]}

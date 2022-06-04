@@ -5,11 +5,7 @@ import "./App.css";
 import {
 	Box,
 	ChakraProvider,
-	Container,
 	extendTheme,
-	Heading,
-	Stack,
-	Text,
 } from "@chakra-ui/react";
 /* COMPONENTS */
 import Header from "./Components/Header/Header";
@@ -20,6 +16,8 @@ import Chose from "./Components/Chose/Chose";
 import Footer from "./Components/Footer/Footer";
 import Contact from "./Components/Contact/Contact";
 import Login from "./Components/Login/Login";
+import Signin from './Components/Signin/Signin'
+
 /* SCROLL ANIMATIONS */
 import "aos/dist/aos.css";
 
@@ -78,7 +76,7 @@ function App() {
 						element={
 							<Box color={"white"} width={"80%"} m={"auto"}>
 								<Header />
-								{/* <Login/> */}
+								<Signin/>
 								<Footer />
 							</Box>
 						}
